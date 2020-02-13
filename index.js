@@ -266,6 +266,7 @@ function getOlderCars(inventory, max) {
 */
 function getGermanCars(inventory) {
   /* code here */
+  const result = [];
   for (let i = 0; i < inventory.length; i++) {
     const car = inventory[i];
     if (
@@ -274,9 +275,10 @@ function getGermanCars(inventory) {
       car.car_make === "Volkswagen" ||
       car.car_make === "BMW" 
     ) {
-    //inventory.push(car);
+    result.push(car);
     }
   }
+  return result
 }
 
 /**
