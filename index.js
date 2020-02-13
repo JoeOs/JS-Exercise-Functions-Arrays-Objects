@@ -63,12 +63,14 @@ console.log(makePersonObject(5, "Leia", "liea@leia.com"));
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName() {
+function getName(id, name, email) {
   /* code here */
-  let id = 1;
-  let name = "Leia";
-  let email = "leai@leia.com";
-  return `Hello, my name is ${name}`;
+  let a = {
+    id: 1,
+    name: "Luke",
+    email:"leai@leia.com"
+  }
+  return `Hello, my name is ${a.name}`;
 }
 
 /**
@@ -316,8 +318,14 @@ const argTimesTwo = a => a * 2; // code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
+function carMaker(number) {
   /* code here */
+  return {
+    odometer: number,
+    drive: function(distance) {
+      return (this.odometer += distance)
+    }
+  }
 }
 
 /// ////// END OF CHALLENGE /////////
