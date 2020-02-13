@@ -63,7 +63,7 @@ console.log(makePersonObject(5, "Leia", "liea@leia.com"));
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(person) {
+function getName() {
   /* code here */
   let id = 1;
   let name = "Leia";
@@ -84,8 +84,17 @@ function getName(person) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
   /* code here */
+  return{
+    name,
+    sum: function (a, b) {
+      return a + b;
+    },
+    speak: function () {
+      return `Hello, my name is ${name}`
+    }
+  }
 }
 
 
@@ -148,6 +157,8 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  const car = inventory[index];
+  return `This is a ${car.car_make} ${car.car_model}`
 }
 
 /**
